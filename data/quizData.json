@@ -1,0 +1,21 @@
+{
+    "quizData": [
+      {
+          "question":"ReactJS is developed by _____?", 
+          "options":["Google Engineers","Facebook Engineers"]
+      },
+      {
+          "question":"ReactJS is an MVC based framework?",
+          "options":["True","False"]
+      },
+      {
+         "question":"Which of the following concepts is/are key to ReactJS",
+         "options":["Component-oriented design", "Event delegation model", "Both of the above"]
+      },
+      {
+          "question":"ReactJS focuses on which of the following part when considering MVC",
+          "options": ["M (Model)", "V (View)", "C (Controller)"]
+      }
+    ],
+    "answers":[1, 1, 2, 1]
+}
