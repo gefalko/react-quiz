@@ -10,6 +10,7 @@ Build webpack bundle & start node http server
 ```bash
 $ npm run start 
 ```
+open browser on http://localhost:3001
 
 ### quostions management
 
