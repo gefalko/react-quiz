@@ -7,7 +7,6 @@ export default class UserEmail extends React.Component{
     constructor(props) {
         super(props)
         this.state = {};
-        this.onSubmit = this.onSubmit.bind(this);
     }
 
     handleEmailChange = (value) => {
@@ -15,7 +14,7 @@ export default class UserEmail extends React.Component{
         this.setState({email: value});
     }  
 
-    onSubmit(event){
+    onSubmit = (event) => {
         event.preventDefault();
         this.props.submitHandler(this.state.email);
     }
