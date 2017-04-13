@@ -3,7 +3,6 @@ import Button from 'react-toolbox/lib/button';
 import Question from './question/Question'
 import Results from './results/Results';
 
-// stateless reacreat to static
 class Step extends React.Component{
 
     constructor(props){
@@ -12,13 +11,9 @@ class Step extends React.Component{
     }
 
     render(){
-        
-        const style = {
-            padding: '10px 0px'
-        }
 
         return(
-            <div style={style}>
+            <div style={{padding: '10px 0px'}}>
                 Question {this.props.step} of {this.props.total}
             </div>
         )
@@ -26,20 +21,23 @@ class Step extends React.Component{
 
 }
 
-
 export default class Quiz extends React.Component{
 
     constructor(props){
+        
         super(props);
+        
         this.state = { 
             step:1,
             userAnswers: []
         };
+        
     }
 
     optionsChangeHandle = (value) => {
+        
         this.state.userAnswers[this.state.step-1] = parseInt(value);
-        console.log("option change ", this.state);
+        
     }
 
     componentDidMount(){
@@ -52,8 +50,9 @@ export default class Quiz extends React.Component{
     }
 
     nextStep = () =>{
-        console.log("Next step");
+       
         this.setState({step: (this.state.step+1)});
+        
     }
 
     render(){
