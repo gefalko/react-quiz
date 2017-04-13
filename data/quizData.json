@@ -15,7 +15,38 @@
       {
           "question":"ReactJS focuses on which of the following part when considering MVC",
           "options": ["M (Model)", "V (View)", "C (Controller)"]
+      },
+      {
+          "question":" Which of the following is an advantage of using JavaScript?",
+          "options": ["Less server interaction", "Immediate feedback to the visitors", "Increased interactivity", "All of the above."]
+      },
+      {
+          "Which of the following function of Array object calls a function for each element in the array?",
+          "options": ["concat()", "every()", "filter()", "forEach()"]
+      },
+      {
+          "question":"Which of the following function of Array object extracts a section of an array and returns a new array?",
+          "options": ["slice()", "shift()", "reverse()", "some()"]
+      },
+      {
+          "question":"Which of the following is a disadvantage of using JavaScript?",
+          "options": [
+                        "Client-side JavaScript does not allow the reading or writing of files.",
+                        "JavaScript can not be used for Networking applications because there is no such support available.", 
+                        "JavaScript doesn't have any multithreading or multiprocess capabilities.",
+                        "All of the above.",
+          ]
+      },
+      {
+          "question":"Which of the following function of Array object returns true if at least one element in this array satisfies the provided testing function?
+
+",
+          "options": ["reverse()", "shift()", "slice()", "some()"]
+      },
+      {
+          "question":"Which of the following is the correct syntax to print a page using JavaScript?",
+          "options": ["window.print();", "browser.print()", "navigator.print()", "document.print()"]
       }
     ],
-    "answers":[1, 1, 2, 1]
+    "answers":[1, 1, 2, 1, 3, 3, 0, 3, 3, 0]
 }
