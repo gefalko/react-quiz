@@ -11,3 +11,8 @@ Build webpack bundle & start node http server
 $ npm run start 
 ```
 
+### quostions management
+
+```bash
+/data/quizData.json 
+```
