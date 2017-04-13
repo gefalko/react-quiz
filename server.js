@@ -19,7 +19,8 @@ jsonfile.readFile('./data/quizData.json', function(err, data) {
         quizData = data.quizData;
         quizAnswers = data.answers; 
     }else{
-        console.log(err);
+        // errno -2 == file no exist
+        if(err.errno != -2)console.log(err);
     }
 });
 

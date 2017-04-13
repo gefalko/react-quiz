@@ -21,7 +21,7 @@
           "options": ["Less server interaction", "Immediate feedback to the visitors", "Increased interactivity", "All of the above."]
       },
       {
-          "Which of the following function of Array object calls a function for each element in the array?",
+          "question":"Which of the following function of Array object calls a function for each element in the array?",
           "options": ["concat()", "every()", "filter()", "forEach()"]
       },
       {
@@ -34,13 +34,11 @@
                         "Client-side JavaScript does not allow the reading or writing of files.",
                         "JavaScript can not be used for Networking applications because there is no such support available.", 
                         "JavaScript doesn't have any multithreading or multiprocess capabilities.",
-                        "All of the above.",
-          ]
+                        "All of the above."
+                    ]
       },
       {
-          "question":"Which of the following function of Array object returns true if at least one element in this array satisfies the provided testing function?
-
-",
+          "question":"Which of the following function of Array object returns true if at least one element in this array satisfies the provided testing function?",
           "options": ["reverse()", "shift()", "slice()", "some()"]
       },
       {
