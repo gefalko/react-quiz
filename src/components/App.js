@@ -8,26 +8,19 @@ export default class App extends React.Component{
     constructor(props) {
         super(props);
         this.state = {};
-        this.setUserEmail = this.setUserEmail.bind(this);
     }
 
-    setUserEmail(email){
+    setUserEmail = (email) => {
         this.setState({email:email});
     }
 
-
     render(){
 
-        const content = (this.state.email) ? <Quiz user={this.state.email}/> : <UserEmailBox submitHandler={this.setUserEmail}/>;
-
-        const contentStyle = {
-            margin:'25px',
-            fontFamily: 'Roboto,sans-serif'
-        }
-
+        const content = (this.state.email) ? <Quiz user={this.state.email} /> : <UserEmailBox submitHandler={this.setUserEmail}/>;
+        
         return (
             <div>
-                <AppBar title='JavaScript quiz' leftIcon='school' />
+                <AppBar title={{ margin: '25px', fontFamily: 'Roboto,sans-serif' }} leftIcon='school' />
                 <div style={contentStyle}>
                     { content }
                 </div>    
