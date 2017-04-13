@@ -65,6 +65,9 @@ app.post('/api/save/score', function(req, res){
     res.sendStatus(200);    
 });
 
+/* Save users results from memory to usersScores.json file 
+*  when shudown app.
+*/
 
 const gracefulShutdown = function(msg, callback) {
     jsonfile.writeFile('./data/usersScores.json', usersScores , function (err) {
@@ -79,20 +82,20 @@ process.once('SIGUSR2', function() {
         process.kill(process.pid, 'SIGUSR2');
     });
 });
+
 // For app termination
 process.on('SIGINT', function() {
     gracefulShutdown('app termination', function() {
         process.exit(0);
     });
 });
+
 // For Heroku app termination
 process.on('SIGTERM', function() {
     gracefulShutdown('Heroku app termination', function() {
         process.exit(0);
     });
 });
-
-
 
 app.listen(3001, function () {
 	console.log('Quiz app listening on port 3001!');
