@@ -12,8 +12,6 @@ class FormatedUserAnswer extends React.Component{
     }
 
    setStyle(index, userAnswer, correctAnswer){
-
-
         const red = {
             color:'red'
         };
@@ -48,7 +46,6 @@ class FormatedUserAnswer extends React.Component{
                 <div style={this.setStyle(index, userAnswer, correctAnswer)}>{option}</div>
             )
         });
-
 
         const orCorrect = (userAnswer == correctAnswer);
         

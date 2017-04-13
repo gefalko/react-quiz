@@ -15,13 +15,12 @@ export default class App extends React.Component{
     }
 
     render(){
-
         const content = (this.state.email) ? <Quiz user={this.state.email} /> : <UserEmailBox submitHandler={this.setUserEmail}/>;
         
         return (
             <div>
-                <AppBar title={{ margin: '25px', fontFamily: 'Roboto,sans-serif' }} leftIcon='school' />
-                <div style={contentStyle}>
+                <AppBar title='JavaScript quiz' leftIcon='school' />
+                <div style={{ margin: '25px', fontFamily: 'Roboto,sans-serif' }} >
                     { content }
                 </div>    
             </div>

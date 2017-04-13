@@ -11,7 +11,6 @@ class Step extends React.Component{
     }
 
     render(){
-
         return(
             <div style={{padding: '10px 0px'}}>
                 Question {this.props.step} of {this.props.total}
@@ -24,41 +23,33 @@ class Step extends React.Component{
 export default class Quiz extends React.Component{
 
     constructor(props){
-        
         super(props);
         
         this.state = { 
             step:1,
             userAnswers: []
         };
-        
     }
 
     optionsChangeHandle = (value) => {
-        
         this.state.userAnswers[this.state.step-1] = parseInt(value);
-        
     }
 
     componentDidMount(){
-
       fetch(`/api/quiz`)
             .then(responce => responce.json())
             .then(data => this.setState({quizData:data}))
             .catch(error => console.log(err));
-
     }
 
     nextStep = () =>{
-       
         this.setState({step: (this.state.step+1)});
-        
     }
 
     render(){
 
-        if(!this.state.quizData)return(<div></div>);
-        
+        if(!this.state.quizData)return (<div></div>);
+
         if(this.state.step > this.state.quizData.length)
             return(<Results quizData={this.state.quizData} user={this.props.user} userAnswers={this.state.userAnswers}/>)
             

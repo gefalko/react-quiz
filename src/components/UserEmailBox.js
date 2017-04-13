@@ -10,7 +10,6 @@ export default class UserEmail extends React.Component{
     }
 
     handleEmailChange = (value) => {
-        console.log(name, value);
         this.setState({email: value});
     }  
 
